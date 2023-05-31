@@ -62,10 +62,10 @@ main {
   height: 50dvh
 }
 
-.card-containter {
+.card-container {
   height: 48dvh;
   background-color: black;
-  height:53dvh
+  height: 53dvh;
   width: 100dvw
 }
 
