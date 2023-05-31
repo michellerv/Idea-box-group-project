@@ -2,10 +2,11 @@
 * {
     font-family: 'Poppins', sans-serif;
     border: 1px solid pink;
-    margin: auto;
+    margin: 0;
 }
 
 body {
+    height:100dvh;
     display:flex;
     
 }
@@ -15,5 +16,7 @@ header {
 }
 
 h1 {
-
+    font-size: xxx-large;
+    padding: 10px;
+    color: #FFFFFF;
 }
