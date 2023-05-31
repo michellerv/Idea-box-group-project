@@ -20,3 +20,10 @@ h1 {
     padding: 10px;
     color: #FFFFFF;
 }
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
