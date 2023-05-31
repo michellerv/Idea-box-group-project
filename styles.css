@@ -2,6 +2,18 @@
 * {
     font-family: 'Poppins', sans-serif;
     border: 1px solid pink;
-    margin: 0;
+    margin: auto;
 }
 
+body {
+    display:flex;
+    
+}
+
+header {
+    background-color: #1F1F3C;
+}
+
+h1 {
+
+}
