@@ -5,3 +5,25 @@
     margin: 0;
 }
 
+body {
+    height:100dvh;
+    display:flex;
+    
+}
+
+header {
+    background-color: #1F1F3C;
+}
+
+h1 {
+    font-size: xxx-large;
+    padding: 10px;
+    color: #FFFFFF;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
