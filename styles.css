@@ -51,7 +51,6 @@ main {
   height: 6dvh;
   margin-top: 5%
   
-
 }
 
 .form {
@@ -59,12 +58,19 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 50dvh
+  height: 50dvh;
+  width: 100dvw;
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
 }
 
 .card-container {
   height: 48dvh;
-  background-color: black;
+  background-color: #EAEAF4;
   height: 53dvh;
   width: 100dvw
 }
