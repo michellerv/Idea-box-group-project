@@ -26,14 +26,17 @@ main {
     flex-direction: column;
     justify-content: space-around;
     width: 100dvh;
+    background-color: #EAEAF4
 
 }
 
 
-.title-input, .body-input {
+.title-input {
   width: 59dvh;
   margin-left: 13%;
-  height: 3dvh;
+  height: 13%;
+  margin-bottom: 3%;
+  margin-top: 4%;
 }
 
 .body-input {
@@ -46,19 +49,23 @@ main {
   width: 60dvh;
   margin-left: 13%;
   height: 6dvh;
+  margin-top: 5%
+  
 
 }
 
 .form {
-  height: 47dvh;
   background-color: #A8AAD2;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 50dvh
 }
 
 .card-containter {
   height: 48dvh;
-  background-color: #EAEAF4
+  background-color: black;
+  height:53dvh
+  width: 100dvw
 }
 
