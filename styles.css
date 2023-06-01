@@ -1,12 +1,38 @@
+/* *, *::before, *::after {
+    box-sizing: border-box;
+} */
+
 
 * {
     font-family: 'Poppins', sans-serif;
     margin: 0;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
     display:flex;
-    
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+#root, #__next {
+    isolation: isolate;
 }
 
 header {
@@ -59,8 +85,8 @@ main {
   background-color: #A8AAD2;
   display: flex;
   flex-direction: column;
-  height: 50dvh;
-  width: 84dvw;
+  height: 52dvh;
+  width: 85dvw;
   align-items: center;
   justify-content: center;
 
@@ -74,6 +100,27 @@ label {
 .card-container {
   height: 48dvh;
   background-color: #EAEAF4;
-  width: 84dvw;
+  width: 85dvw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card {
+    border: 3px solid #1F1F3C;
+    height: 40dvh;
+    width: 34dvh;
+    font-size: 25px;
+    background-color: #FFFFFF;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.card-title {
+    font-weight: bold;
+    margin-bottom: 22px;
 }
 
