@@ -6,7 +6,6 @@
 }
 
 body {
-    height:100dvh;
     display:flex;
     
 }
@@ -25,13 +24,12 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 100dvh;
-
+    
 }
 
 
 .title-input {
-    height: 15%;
+    height: 100%;
     margin-bottom: 3%;
 }
 
@@ -49,22 +47,32 @@ main {
 .form {
   background-color: #A8AAD2;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   height: 50dvh;
-  width: 100dvw;
+  width: 84dvw;
 }
 
+/* .input-form {
+    height: 100%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+} */
+
 label {
-    display: inline-block;
+    display: flex;
     width: 100px;
     text-align: right;
+    flex-wrap: nowrap;
+    flex-direction: row;
 }
 
 .card-container {
   height: 48dvh;
   background-color: #EAEAF4;
-  height: 53dvh;
-  width: 100dvw
+  width: 84dvw;
 }
 
