@@ -1,7 +1,6 @@
 
 * {
     font-family: 'Poppins', sans-serif;
-    border: 1px solid pink;
     margin: 0;
 }
 
@@ -17,7 +16,7 @@ header {
 h1 {
     font-size: xxx-large;
     padding: 10px;
-    color: #FFFFFF;
+    color: #EAEAF4;
 }
 
 main {
@@ -29,45 +28,47 @@ main {
 
 
 .title-input {
-    height: 100%;
-    margin-bottom: 3%;
+    height: 45px;
+    margin-bottom: 40px;
+    width: 700px;
+    margin-top: 35px;
+    margin-left: 5px;
+    border: 3px solid #1F1F3C;
 }
 
 .body-input {
-    height: 25%;
+    height: 100px;
     margin-bottom: 30px;
+    width: 700px;
+    margin-left: 5px;
+    margin-right: 11px;
+    border: 3px solid #1F1F3C;
 }
 
 .save-button {
-    height: 23%;
+    height: 80px;
     margin-bottom: 39px;
-  
+    width: 708px;
+    margin-left: 56px;
+    background-color: #1F1F3C ;
+    color: #EAEAF4;
+    font-size: 35px;
 }
 
-.form {
+.input-form {
   background-color: #A8AAD2;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
   height: 50dvh;
   width: 84dvw;
+  align-items: center;
+  justify-content: center;
+
 }
 
-/* .input-form {
-    height: 100%;
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-} */
-
 label {
-    display: flex;
-    width: 100px;
     text-align: right;
-    flex-wrap: nowrap;
-    flex-direction: row;
+    font-size: 25px;
 }
 
 .card-container {
