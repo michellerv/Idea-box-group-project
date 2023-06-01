@@ -13,7 +13,8 @@ var savedIdeas = []
 saveButton.addEventListener('click', function(event){
   event.preventDefault();
   createIdea();
-  saveIdea()
+  saveIdea();
+  clearForm();
 });
 
 
@@ -32,3 +33,9 @@ function saveIdea() {
     return savedIdeas
 }
 
+
+
+function clearForm() {
+  title.value = '';
+  body.value = '';
+}
