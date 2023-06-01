@@ -2,6 +2,8 @@
 var saveButton = document.querySelector('#saved');
 var title = document.querySelector('.title-input');
 var body = document.querySelector('.body-input');
+var cardTitle = document.querySelector('.card-title');
+var cardBody = document.querySelector('.card-body');
 
 
 //Global variables
@@ -29,3 +31,4 @@ function saveIdea() {
     savedIdeas.push(currentIdea)
     return savedIdeas
 }
+
