@@ -45,7 +45,7 @@ function displayCard() {
   for (var i = 0; i < savedIdeas.length; i++) {
     cardContainer.innerHTML +=
     `<article class="card" id= '${savedIdeas[i].id}'>
-    <nav class="card-nav"><img src="assets/delete.svg">
+    <nav class="card-nav"><button class="delete-button"><img class="delete-img" src="assets/delete.svg"></button>
     </nav>
     <p class="card-title">${savedIdeas[i].title}</p>
     <p class="card-body">${savedIdeas[i].body}</p>`
