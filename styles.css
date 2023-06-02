@@ -138,10 +138,14 @@ label {
     justify-content: flex-end;
 }
 
-img {
+.delete-img {
     max-width: 72px;
 }
 
-/* .hidden {
-    display: none;
-} */
+.delete-button {
+    height: 57px;
+    width: 60px;
+    background-color: #1F1F3C;
+    border: 0;
+    padding: 0;
+}
