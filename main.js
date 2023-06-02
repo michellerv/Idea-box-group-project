@@ -2,9 +2,8 @@
 var saveButton = document.querySelector('#saved');
 var title = document.querySelector('.title-input');
 var body = document.querySelector('.body-input');
-var cardTitle = document.querySelector('.card-title');
-var cardBody = document.querySelector('.card-body');
-var card = document.querySelector('.card');
+
+var cardContainer = document.querySelector('.card-container')
 
 
 //Global variables
@@ -33,16 +32,17 @@ function saveIdea() {
   var currentIdea = createIdea(title.value, body.value)
     savedIdeas.push(currentIdea)
     displayCard(currentIdea)
-    // return savedIdeas
 }
 
-function displayCard(currentIdea) {
-  cardTitle.classList.remove('hidden');
-  cardBody.classList.remove('hidden');
-  card.classList.remove('hidden')
+function displayCard() {
+  cardContainer.innerHTML = ''
 
-  cardTitle.innerText = currentIdea.title;
-  cardBody.innerText = currentIdea.body
+  for (var i = 0; i < savedIdeas.length; i++) {
+    cardContainer.innerHTML +=
+    `<article class="card" id= '${savedIdeas[i].id}'>
+    <p class="card-title">${savedIdeas[i].title}</p>
+    <p class="card-body">${savedIdeas[i].body}</p>`
+  }
 }
 
 function clearForm() {
