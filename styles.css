@@ -52,7 +52,6 @@ main {
     
 }
 
-
 .title-input {
     height: 45px;
     margin-bottom: 40px;
@@ -71,6 +70,12 @@ main {
     border: 3px solid #1F1F3C;
 }
 
+.save-button:disabled {
+  background-color: #EAEAF4;
+  color: #1F1F3C;
+  cursor:not-allowed;
+}
+
 .save-button {
     height: 80px;
     margin-bottom: 39px;
@@ -80,6 +85,7 @@ main {
     color: #EAEAF4;
     font-size: 35px;
 }
+
 
 .input-form {
   background-color: #A8AAD2;
@@ -105,6 +111,7 @@ label {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  overflow: auto;
 }
 
 .card {

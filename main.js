@@ -3,6 +3,7 @@ var saveButton = document.querySelector('#saved');
 var title = document.querySelector('.title-input');
 var body = document.querySelector('.body-input');
 
+
 var cardContainer = document.querySelector('.card-container')
 
 
@@ -17,6 +18,10 @@ saveButton.addEventListener('click', function(event){
   saveIdea();
   clearForm();
 });
+title.addEventListener('change', checkInput);
+body.addEventListener('change', checkInput);
+// document.getElementById('saved').disabled = true;
+// saveButton.setAttribute('disabled', '') 
 
 
 //Functions
@@ -43,9 +48,20 @@ function displayCard() {
     <p class="card-title">${savedIdeas[i].title}</p>
     <p class="card-body">${savedIdeas[i].body}</p>`
   }
+  checkInput()
 }
 
 function clearForm() {
   title.value = '';
   body.value = '';
 }
+
+saveButton.disabled = true;
+function checkInput() {
+  if (title.value === '' && body.value === '') {
+    saveButton.disabled = true
+  } else {
+    saveButton.disabled = false 
+  }
+}
+
