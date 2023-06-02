@@ -18,10 +18,10 @@ saveButton.addEventListener('click', function(event){
   saveIdea();
   clearForm();
 });
-title.addEventListener('change', checkInput);
-body.addEventListener('change', checkInput);
-// document.getElementById('saved').disabled = true;
-// saveButton.setAttribute('disabled', '') 
+
+title.addEventListener('keyup', checkInput);
+body.addEventListener('keyup', checkInput);
+
 
 
 //Functions
@@ -48,7 +48,7 @@ function displayCard() {
     <p class="card-title">${savedIdeas[i].title}</p>
     <p class="card-body">${savedIdeas[i].body}</p>`
   }
-  checkInput()
+  saveButton.setAttribute('disabled', '');
 }
 
 function clearForm() {
@@ -56,12 +56,13 @@ function clearForm() {
   body.value = '';
 }
 
-saveButton.disabled = true;
 function checkInput() {
-  if (title.value === '' && body.value === '') {
-    saveButton.disabled = true
+  if (title.value === '') {
+    saveButton.setAttribute('disabled', '')
+  } else if (body.value === '') {
+    saveButton.setAttribute('disabled', '')
   } else {
-    saveButton.disabled = false 
+    saveButton.removeAttribute('disabled')
   }
 }
 
