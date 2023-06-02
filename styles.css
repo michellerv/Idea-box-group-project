@@ -122,13 +122,24 @@ label {
     background-color: #FFFFFF;
     display:flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     text-align: center;
 }
 
 .card-title {
     font-weight: bold;
-    margin-bottom: 22px;
+    margin-top: 25px;
+    margin-bottom: 12px;
+}
+
+.card-nav {
+    background-color: #1F1F3C;
+    display: flex;
+    justify-content: flex-end;
+}
+
+img {
+    max-width: 72px;
 }
 
 /* .hidden {
