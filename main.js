@@ -37,13 +37,15 @@ function saveIdea() {
 
 function displayCard() {
   cardContainer.innerHTML = ''
-
   for (var i = 0; i < savedIdeas.length; i++) {
     cardContainer.innerHTML +=
     `<article class="card" id= '${savedIdeas[i].id}'>
       <nav class="card-nav">
         <button onclick="deleteCard()" type="button" class="delete-button">
-          <img class="delete-img" src="assets/delete.svg">
+          <img class="delete-img" src="assets/delete.svg" alt=delete>
+          <img class="red-star" src="assets/star-active.svg" alt=red 
+          star>
+          <img class="white-star" src="assets/star.svg" alt=white star>
         </button>
       </nav>
       <p class="card-title">${savedIdeas[i].title}</p>
