@@ -135,7 +135,8 @@ label {
 .card-nav {
     background-color: #1F1F3C;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    flex-direction: row-reverse;
 }
 
 .delete-img {
@@ -158,4 +159,15 @@ label {
     border: 0;
     padding: 0;
     background-image: url('assets/star-active.svg');
+}
+
+.red-star {
+  margin-top: -2.2em;
+  padding: -2px;
+}
+
+.star-button {
+  width: 22%;
+  background-color: #1F1F3C;
+  border: #1F1F3C;
 }

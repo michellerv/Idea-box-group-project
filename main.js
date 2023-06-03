@@ -37,13 +37,13 @@ function saveIdea() {
 
 function displayCard() {
   cardContainer.innerHTML = ''
-
   for (var i = 0; i < savedIdeas.length; i++) {
     cardContainer.innerHTML +=
     `<article class="card" id= '${savedIdeas[i].id}'>
       <nav class="card-nav">
-        <button  type="button" class="delete-button" id="delete" onClick="starButton()">
-
+        <button onclick="deleteCard()" type="button" class="delete-button">
+        </button>  
+        <button onclick="star-button" type="button" class="star-button">  
         </button>
       </nav>
       <p class="card-title">${savedIdeas[i].title}</p>
@@ -74,7 +74,7 @@ function deleteCard() {
       savedIdeas.splice(i, 1)
     }
       displayCard()
-    }
+}
 }
 // deleteButton.addEventListener('click', starButton)
   // add onclick(starButton) to the star button
