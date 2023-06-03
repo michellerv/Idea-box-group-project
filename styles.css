@@ -149,6 +149,16 @@ label {
     background-color: #1F1F3C;
     border: 0;
     padding: 0;
+    background-image: url('assets/delete.svg');
+}
+
+.star-img {
+    height: 57px;
+    width: 60px;
+    background-color: #1F1F3C;
+    border: 0;
+    padding: 0;
+    background-image: url('assets/star-active.svg');
 }
 
 .red-star {

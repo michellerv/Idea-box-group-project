@@ -4,9 +4,9 @@ var title = document.querySelector('.title-input');
 var body = document.querySelector('.body-input');
 var cardContainer = document.querySelector('.card-container')
 
-
 //Global variables
 var savedIdeas = [];
+var favoritedIdeas = [];
 var currentIdea;
 
 //Event Listeners
@@ -42,10 +42,8 @@ function displayCard() {
     `<article class="card" id= '${savedIdeas[i].id}'>
       <nav class="card-nav">
         <button onclick="deleteCard()" type="button" class="delete-button">
-          <img class="delete-img" src="assets/delete.svg" alt=delete>
         </button>  
         <button onclick="star-button" type="button" class="star-button">  
-          <img class="white-star" src="assets/star.svg" alt=white star>
         </button>
       </nav>
       <p class="card-title">${savedIdeas[i].title}</p>
@@ -76,5 +74,21 @@ function deleteCard() {
       savedIdeas.splice(i, 1)
     }
       displayCard()
-    }
+}
+}
+// deleteButton.addEventListener('click', starButton)
+  // add onclick(starButton) to the star button
+var deleteButton = document.getElementsByClassName('delete-button')
+
+function toggleClass(element, className) {
+  element.classList.toggle(className)
+}
+
+function starButton() {
+  for (var i=0; i < savedIdeas.length; i++) {
+  if (parseInt(event.target.closest('article').id) === savedIdeas[i].id) {
+    favoritedIdeas.push(savedIdeas[i])
+  } 
+  toggleClass(deleteButton[i], 'star-img')
   }
+}
