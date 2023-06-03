@@ -42,9 +42,9 @@ function createIdea(title, body) {
 }
   
 function saveIdea() {
-  currentIdea = createIdea(title.value, body.value)
-    savedIdeas.push(currentIdea)
-    displayCard(currentIdea)
+  currentIdea = createIdea(title.value, body.value);
+    savedIdeas.push(currentIdea);
+    displayCard(currentIdea);
 }
 
 function displayCard() {
@@ -72,20 +72,20 @@ function clearForm() {
 
 function checkInput() {
   if (title.value === '') {
-    saveButton.setAttribute('disabled', '')
+    saveButton.setAttribute('disabled', '');
   } else if (body.value === '') {
-    saveButton.setAttribute('disabled', '')
+    saveButton.setAttribute('disabled', '');
   } else {
-    saveButton.removeAttribute('disabled')
+    saveButton.removeAttribute('disabled');
   }
 }
 
 function deleteCard(event) {
   for (var i = 0; i < savedIdeas.length; i++) {
     if (parseInt(event.target.closest('article').id) === savedIdeas[i].id) {
-      savedIdeas.splice(i, 1)
+      savedIdeas.splice(i, 1);
     }
-    displayCard()
+    displayCard();
   }
 }
 
@@ -96,7 +96,7 @@ function favoriteIdea(event) {
       savedIdeas[i].class = 'star-img-red'
     } 
   }
-  displayCard()
+  displayCard();
 }
 
 function unfavorite(event) {
@@ -106,5 +106,5 @@ function unfavorite(event) {
       savedIdeas[i].class = 'star-img-white'
     }
   }
-  displayCard()
+  displayCard();
 }
