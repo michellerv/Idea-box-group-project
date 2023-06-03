@@ -42,8 +42,8 @@ function displayCard() {
     cardContainer.innerHTML +=
     `<article class="card" id= '${savedIdeas[i].id}'>
       <nav class="card-nav">
-        <button onclick="starButton()" type="button" class="delete-button id="delete">
-          <img class="delete-img" src="assets/delete.svg">
+        <button  type="button" class="delete-button" id="delete" onClick="starButton()">
+
         </button>
       </nav>
       <p class="card-title">${savedIdeas[i].title}</p>
@@ -76,20 +76,19 @@ function deleteCard() {
       displayCard()
     }
 }
-
-var starSymbol = document.getElementById('delete')
-console.log(starSymbol)
-
+// deleteButton.addEventListener('click', starButton)
   // add onclick(starButton) to the star button
-function toggleFavorited(element, className) {
-  element.classList.add(className)
+var deleteButton = document.getElementsByClassName('delete-button')
+
+function toggleClass(element, className) {
+  element.classList.toggle(className)
 }
 
 function starButton() {
   for (var i=0; i < savedIdeas.length; i++) {
   if (parseInt(event.target.closest('article').id) === savedIdeas[i].id) {
     favoritedIdeas.push(savedIdeas[i])
+  } 
+  toggleClass(deleteButton[i], 'star-img')
   }
-  }
-  toggleFavorited(starSymbol, "orange-img")
 }
