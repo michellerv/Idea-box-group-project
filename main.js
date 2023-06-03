@@ -2,7 +2,7 @@
 var saveButton = document.querySelector('#saved');
 var title = document.querySelector('.title-input');
 var body = document.querySelector('.body-input');
-var cardContainer = document.querySelector('.card-container')
+var cardContainer = document.querySelector('.card-container');
 
 //Global variables
 var savedIdeas = [];
@@ -20,17 +20,29 @@ saveButton.addEventListener('click', function(event){
 title.addEventListener('keyup', checkInput);
 body.addEventListener('keyup', checkInput);
 
+cardContainer.addEventListener('click', function(event) {
+  if (event.target.className === 'star-button star-img-white') {
+    favoriteIdea(event);
+  } else if (event.target.className === 'star-button star-img-red') {
+    unfavorite(event);
+  } else if (event.target.className.includes('delete-button')) {
+      deleteCard(event);
+    }
+  })
+
 //Functions
 function createIdea(title, body) {
   return {
     id: Date.now(),
     title: title,
-    body: body
+    body: body,
+    isFavorite: false,
+    class: 'star-img-white'
   }
 }
   
 function saveIdea() {
-  var currentIdea = createIdea(title.value, body.value)
+  currentIdea = createIdea(title.value, body.value)
     savedIdeas.push(currentIdea)
     displayCard(currentIdea)
 }
@@ -39,11 +51,11 @@ function displayCard() {
   cardContainer.innerHTML = ''
   for (var i = 0; i < savedIdeas.length; i++) {
     cardContainer.innerHTML +=
-    `<article class="card" id= '${savedIdeas[i].id}'>
+    `<article class="card" id= "${savedIdeas[i].id}">
       <nav class="card-nav">
-        <button onclick="deleteCard()" type="button" class="delete-button">
+        <button type="button" class="delete-button">
         </button>  
-        <button onclick="star-button" type="button" class="star-button">  
+        <button type="button" class="star-button ${savedIdeas[i].class}">  
         </button>
       </nav>
       <p class="card-title">${savedIdeas[i].title}</p>
@@ -68,27 +80,31 @@ function checkInput() {
   }
 }
 
-function deleteCard() {
+function deleteCard(event) {
   for (var i = 0; i < savedIdeas.length; i++) {
     if (parseInt(event.target.closest('article').id) === savedIdeas[i].id) {
       savedIdeas.splice(i, 1)
     }
-      displayCard()
-}
-}
-// deleteButton.addEventListener('click', starButton)
-  // add onclick(starButton) to the star button
-var deleteButton = document.getElementsByClassName('delete-button')
-
-function toggleClass(element, className) {
-  element.classList.toggle(className)
-}
-
-function starButton() {
-  for (var i=0; i < savedIdeas.length; i++) {
-  if (parseInt(event.target.closest('article').id) === savedIdeas[i].id) {
-    favoritedIdeas.push(savedIdeas[i])
-  } 
-  toggleClass(deleteButton[i], 'star-img')
+    displayCard()
   }
+}
+
+function favoriteIdea(event) {
+  for (var i=0; i < savedIdeas.length; i++) {
+    if (parseInt(event.target.closest('article').id) === savedIdeas[i].id) {
+      savedIdeas[i].isFavorite = true
+      savedIdeas[i].class = 'star-img-red'
+    } 
+  }
+  displayCard()
+}
+
+function unfavorite(event) {
+  for (var i=0; i < savedIdeas.length; i++) {
+    if (parseInt(event.target.closest('article').id) === savedIdeas[i].id) {
+      savedIdeas[i].isFavorite = false
+      savedIdeas[i].class = 'star-img-white'
+    }
+  }
+  displayCard()
 }
