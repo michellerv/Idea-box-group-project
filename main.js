@@ -4,9 +4,9 @@ var title = document.querySelector('.title-input');
 var body = document.querySelector('.body-input');
 var cardContainer = document.querySelector('.card-container')
 
-
 //Global variables
 var savedIdeas = [];
+var favoritedIdeas = [];
 var currentIdea;
 
 //Event Listeners
@@ -42,7 +42,7 @@ function displayCard() {
     cardContainer.innerHTML +=
     `<article class="card" id= '${savedIdeas[i].id}'>
       <nav class="card-nav">
-        <button onclick="deleteCard()" type="button" class="delete-button">
+        <button onclick="starButton()" type="button" class="delete-button id="delete">
           <img class="delete-img" src="assets/delete.svg">
         </button>
       </nav>
@@ -75,4 +75,21 @@ function deleteCard() {
     }
       displayCard()
     }
+}
+
+var starSymbol = document.getElementById('delete')
+console.log(starSymbol)
+
+  // add onclick(starButton) to the star button
+function toggleFavorited(element, className) {
+  element.classList.add(className)
+}
+
+function starButton() {
+  for (var i=0; i < savedIdeas.length; i++) {
+  if (parseInt(event.target.closest('article').id) === savedIdeas[i].id) {
+    favoritedIdeas.push(savedIdeas[i])
   }
+  }
+  toggleFavorited(starSymbol, "orange-img")
+}
