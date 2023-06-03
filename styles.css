@@ -1,7 +1,3 @@
-/* *, *::before, *::after {
-    box-sizing: border-box;
-} */
-
 
 * {
     font-family: 'Poppins', sans-serif;
@@ -139,35 +135,29 @@ label {
     flex-direction: row-reverse;
 }
 
-.delete-img {
-    max-width: 72px;
-}
-
 .delete-button {
     height: 57px;
     width: 60px;
     background-color: #1F1F3C;
     border: 0;
     padding: 0;
-    background-image: url('assets/delete.svg');
+    background-image: url(assets/delete.svg);
 }
 
-.star-img {
+.star-img-white {
+    height: 57px;
+    width: 60px;
+    background-color: #1F1F3C;
+    border: 0;
+    padding: 0;
+    background-image: url('assets/star.svg');
+}
+
+.star-img-red {
     height: 57px;
     width: 60px;
     background-color: #1F1F3C;
     border: 0;
     padding: 0;
     background-image: url('assets/star-active.svg');
-}
-
-.red-star {
-  margin-top: -2.2em;
-  padding: -2px;
-}
-
-.star-button {
-  width: 22%;
-  background-color: #1F1F3C;
-  border: #1F1F3C;
 }
