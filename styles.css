@@ -37,14 +37,26 @@ p, h1, h2, h3, h4, h5, h6 {
 
 header {
     background-color: #1F1F3C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1 {
-    font-size: xxx-large;
+    font-size: 8dvh;
     padding: 10px;
     color: #EAEAF4;
 }
 
+.show-starred {
+    height: 9dvh;
+    width: 33dvh;
+    font-size: 3dvh;
+    font-weight: bold;
+    background-color: #A8AAD2;
+    color: #1F1F3C;
+    border: solid 2px #1F1F3C;
+}
 main {
     display: flex;
     flex-direction: column;
@@ -92,7 +104,7 @@ main {
   display: flex;
   flex-direction: column;
   height: 52dvh;
-  width: 85dvw;
+  width: 82dvw;
   align-items: center;
   justify-content: center;
 
@@ -106,7 +118,7 @@ label {
 .card-container {
   height: 48dvh;
   background-color: #EAEAF4;
-  width: 85dvw;
+  width: 82dvw;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
