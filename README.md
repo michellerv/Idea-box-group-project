@@ -10,15 +10,15 @@ We built a fully functional website that allows users to create new ideas with a
   - From there it can be opened by typing open index.html in the terminal. This will open it in an internet browser and upon opening it will be ready to use. 
 
 ### Preview of App:
-<img src=” ”>
+<iframe src="https://giphy.com/embed/JIZwojq90cnFFErUsl" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/JIZwojq90cnFFErUsl">via GIPHY</a></p>
 
 ### Context: 
 We are in mod 1 and had six days to complete it. We spent approximately 30 hours to finish it all up. It took longer than expected to set the comp up as the CSS tripped us a bit, but once that was done things rolled smoother. 
 
 ### Contributors:
-[Prissilla Escobar] (https://github.com/prissilla-escobar) - 2305 FE Mod 1 student at Turing School for Software and Design
-[Jen Nguyen] (https://github.com/Jnguyen615) - 2305 FE Mod 1 student at Turing School for Software and Design
-[Michelle Villagran] (https://github.com/michellerv)  - 2305 FE Mod 1 student at Turing School for Software and Design
+- [Prissilla Escobar](https://github.com/prissilla-escobar) - 2305 FE Mod 1 student at Turing -  School for Software and Design
+- [Jen Nguyen](https://github.com/Jnguyen615) - 2305 FE Mod 1 student at Turing School for Software and Design
+- [Michelle Villagran](https://github.com/michellerv)  - 2305 FE Mod 1 student at Turing School for Software and Design
 
 ### Learning Goals:
 The major learning goals for this project were to show an understanding of how to write clean HTML, CSS and Javascript. We were expected to match the comp as close as possible. We needed to demonstrate our understanding of how to separate the data model from the DOM and appropriately update the data model first and then the DOM. This project let us practice incorporating and iterating over arrays to filter out what we wanted to display and at what time. Our code needed to be dry and written as such a way to strive towards single responsibility principle and purity. Practice problem solving complex problems and apply newly discovered information.
