@@ -3,14 +3,15 @@ var saveButton = document.querySelector('#saved');
 var title = document.querySelector('.title-input');
 var body = document.querySelector('.body-input');
 var cardContainer = document.querySelector('.card-container');
+var showButton = document.querySelector('.show-favorited');
+var card = document.getElementsByClassName('card');
 
 //Global variables
 var savedIdeas = [];
-var favoritedIdeas = [];
 var currentIdea;
 
 //Event Listeners
-saveButton.addEventListener('click', function(event){
+saveButton.addEventListener('click', function(event) {
   event.preventDefault();
   createIdea();
   saveIdea();
@@ -27,8 +28,16 @@ cardContainer.addEventListener('click', function(event) {
     unfavorite(event);
   } else if (event.target.className.includes('delete-button')) {
       deleteCard(event);
-    }
-  })
+  }
+})
+
+showButton.addEventListener('click', function(event) {  
+  if (event.target.className.includes('not-favorites')) {
+      showFavorites(event);
+  } else {  
+      showMain(event);
+  }
+})
 
 //Functions
 function createIdea(title, body) {
@@ -43,8 +52,8 @@ function createIdea(title, body) {
   
 function saveIdea() {
   currentIdea = createIdea(title.value, body.value);
-    savedIdeas.push(currentIdea);
-    displayCard(currentIdea);
+  savedIdeas.push(currentIdea);
+  displayCard(currentIdea);
 }
 
 function displayCard() {
@@ -92,8 +101,8 @@ function deleteCard(event) {
 function favoriteIdea(event) {
   for (var i=0; i < savedIdeas.length; i++) {
     if (parseInt(event.target.closest('article').id) === savedIdeas[i].id) {
-      savedIdeas[i].isFavorite = true
-      savedIdeas[i].class = 'star-img-red'
+      savedIdeas[i].isFavorite = true;
+      savedIdeas[i].class = 'star-img-red';
     } 
   }
   displayCard();
@@ -102,9 +111,29 @@ function favoriteIdea(event) {
 function unfavorite(event) {
   for (var i=0; i < savedIdeas.length; i++) {
     if (parseInt(event.target.closest('article').id) === savedIdeas[i].id) {
-      savedIdeas[i].isFavorite = false
-      savedIdeas[i].class = 'star-img-white'
+      savedIdeas[i].isFavorite = false;
+      savedIdeas[i].class = 'star-img-white';
     }
   }
   displayCard();
+}
+
+function showFavorites(event) {
+  for (var i = 0; i < savedIdeas.length; i++) {
+    if (!savedIdeas[i].isFavorite) { 
+          card[i].classList.add('hidden');
+          showButton.classList.remove('not-favorites');
+          showButton.innerText = 'Show All Ideas';
+        } 
+      }
+    }
+          
+function showMain(event) {
+  for (var i = 0; i < savedIdeas.length; i++) {
+    if (!savedIdeas[i].isFavorite) {
+      card[i].classList.remove('hidden');
+      showButton.classList.add('not-favorites');
+      showButton.innerText = 'Show Starred Ideas';
+    }
+  }
 }

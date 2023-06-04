@@ -44,7 +44,7 @@ h1 {
     color: #EAEAF4;
 }
 
-.show-starred {
+.show-favorited {
     height: 9dvh;
     width: 33dvh;
     font-size: 3dvh;
@@ -53,11 +53,11 @@ h1 {
     color: #1F1F3C;
     border: solid 2px #1F1F3C;
 }
+
 main {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    
 }
 
 .title-input {
@@ -94,7 +94,6 @@ main {
     font-size: 35px;
 }
 
-
 .input-form {
   background-color: #A8AAD2;
   display: flex;
@@ -103,7 +102,6 @@ main {
   width: 82dvw;
   align-items: center;
   justify-content: center;
-
 }
 
 label {
@@ -172,4 +170,8 @@ label {
     border: 0;
     padding: 0;
     background-image: url('assets/star-active.svg');
+}
+
+.hidden {
+  display: none;
 }
