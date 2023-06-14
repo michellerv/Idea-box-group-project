@@ -10,6 +10,8 @@ We built a fully functional website that allows users to create new ideas with a
   - From there it can be opened by typing open index.html in the terminal. This will open it in an internet browser and upon opening it will be ready to use.
   - Write some ideas and save them!  
 
+-https://michellerv.github.io/Idea-box-group-project/
+
 ### Preview of App:
 ![Idea-Box-Gif](https://github.com/turingschool-examples/self-care-center/assets/119434450/5dbb585c-58f4-43b2-be66-e0b3d82bd283)
 
